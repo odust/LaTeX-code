@@ -1,0 +1,65 @@
+\documentclass{article}\usepackage{amsfonts}\usepackage{amssymb}\usepackage{amsmath}\usepackage{mathtools}\usepackage[dvipsnames,usenames]{color}\usepackage{xcolor}\usepackage[margin=0.5cm]{geometry}\begin{document}\fontsize{13pt}{20pt}\selectfont\setlength{\parindent}{0pt}
+$\color{red} In~this~document, \Bbb{N}~denotes~\Bbb{Z}^+~instead~of~\Bbb{Z}^+\cup\{0\}.$\\
+$Theorem~8.7.~The~class~of~all~cardinal~numbers~is~linearly~ordered~by\leq.~If~\alpha~and~\beta~are~cardinal~numbers,$\\
+$then~exactly~one~of~the~following~is~true: \alpha<\beta; \alpha=\beta; \beta<\alpha~(Trichotomy~Law).$\\
+$Sketch~of~proof:$\\
+$(i)~It~is~easy~to~verify\leq is~a~partial~order.~Let~A, B~be~sets~s.t.~|A|=\alpha, |B|=\beta~and$\\
+$\emptyset\in\mathcal{F}\coloneqq\{S\subseteq A\mid |S|\leq|B|\}\neq\emptyset.~Obviously, \subseteq is~a~partial~order~of~\mathcal{F}.$\\
+$Suppose~L\coloneqq\{X_i\mid i\in I\}~is~a~chain~in~\mathcal{F}, M\coloneqq\bigcup\limits_{i\in I}X_i.$\\
+$\forall i\in I, \exists~injective~f_i: X_i\longrightarrow B.~Define~f: M\longrightarrow B: f(x)=f_i(x)~for~x\in X_i~for~some~i\in I.$\\\\
+$(ii)~X_i's~are~pairwise~comparable~in~L\land f_i's~are~well-defined~injections, \therefore f~is~injective,$\\
+$|M|\leq|B|, X_i\subseteq M\in \mathcal{F}~for~all~i\in I, M~is~an~upper~bound~of~L~in~\mathcal{F}.$\\
+$Therefore~by~Zorn's~Lemma~there~is~a~maximal~element~X~of~\mathcal{F}, |X|\leq |B|, \exists~injective~g: X\longrightarrow B.$\\\\
+$(iii)~Claim~either~X=A~or~Im(g)=B.~For~if~both~of~these~statements~were~false,$\\
+$we~could~find~a\in A\backslash X~and~b\in B\backslash Im(g)~and~define~an~injective~map$\\
+$h: X\cup \{a\}\longrightarrow B~by~h(x)=g(x)~for~x\in X~and~h(a)=b~because$\\
+$g~is~a~well-defined~injective~map\land a\in X^c\land b\in (Im(g))^c, |X\cup \{a\}|\leq |B|, X\cup \{a\}\in \mathcal{F},$\\
+$X\subsetneqq X\cup \{a\}\subseteq X, which~contradicts~the~maximality~of~X.$\\\\
+$(iv)~Hence~either~X=A~so~that~|A|\leq |B|~or~Im(g)=B~in~which~case$\\
+$the~injective~map~B\xrightarrow{g^{-1}} X\subseteq A~(the~Axiom~of~Choice~is~required)~shows~that~|B|\leq |A|.$\\
+$Thus, if~|A|=|B|, \alpha=\beta; if~not, \nexists~bijection~\theta: A\longrightarrow B, \therefore \alpha=|A|\lneqq|B|=\beta\lor\beta=|B|\lneqq|A|=\alpha.$\\\\
+$Theorem~8.10.~If~\alpha~and~\beta~are~cardinal~numbers~s.t.~\beta\leq \alpha~and~\alpha~is~infinite, then~\alpha+\beta=\alpha.$\\
+$Sketch~of~proof:$\\ $(i)~It~suffices~to~prove~\alpha+\alpha=\alpha~(simply~verify~\alpha\leq\alpha+\beta\leq\alpha+\alpha=\alpha~and~apply$\\
+$the~Schroeder-Bernstein~Theorem~to~conclude~\alpha+\beta=\alpha).~Let~A~be~a~set~with~|A|=\alpha~and$\\
+$\mathcal{F}\coloneqq\{S\subseteq A\mid S~is~infinite\land|S\times\{0, 1\}|=|S|\}.$\\\\
+$(ii)~A~is~infinite~by~hypothesis, \exists~D\subseteq A~s.t.~D~is~denumerable~by~Theorem~8.8,$\\
+$D\coloneqq\{d_n\mid n\in\Bbb{N}\land d_i's~are~all~distinct\}.$\\
+$The~map~D\times\{0, 1\}\longrightarrow D~given~by~(d_n, 0)\mapsto 2n~and~(d_n, 1)\mapsto 2n-1~for~all~n\in\Bbb{N}~is~bijective,$\\
+$\therefore D\in\mathcal{F}\neq\emptyset.~Furthermore, obviously, \subseteq is~a~partial~order~of~\mathcal{F}.$\\
+$Suppose~L\coloneqq\{X_i\mid i\in I\}~is~a~chain~in~\mathcal{F}, M\coloneqq\bigcup\limits_{i\in I}X_i.~\forall i\in I, \exists~bijective~f_i: X_i\times\{0, 1\}\longrightarrow X_i.$\\
+$Define~f: M\times\{0, 1\}\longrightarrow M: f(x, y)=f_i(x, y)~for~x\in X_i~for~some~i\in I.$\\\\
+$(iii)~X_i's~are~pairwise~comparable~in~L\land f_i's~are~well-defined~bijections, \therefore f~is~bijective,$\\
+$|M\times\{0, 1\}|=|M|, X_i\subseteq M\in \mathcal{F}~for~all~i\in I, M~is~an~upper~bound~of~L~in~\mathcal{F}.$\\
+$Thus~by~Zorn's~Lemma~there~is~a~maximal~element~C~of~\mathcal{F}, |C\times\{0, 1\}|=|C|, \exists~bijective~g: C\times\{0, 1\}\longrightarrow C.$\\\\
+$(iv)~Claim~|A|=|C|.~If~not, note~|A|=|C\cup (A\backslash C)|, \therefore A\backslash C~is~infinite~by~Lemma~8.9,$\\
+$\exists~B\subseteq (A\backslash C)~s.t.~B~is~denumerable~by~Theorem~8.8, and~as~above,$\\
+$there~would~be~a~bijection~\zeta: B\times\{0, 1\}\longrightarrow B.~By~combining~\zeta~with~g, we~could~then~construct~a~bijection$\\
+$h: (C\cup B)\times \{0, 1\}\longrightarrow (C\cup B): h(x, y)=\begin{cases}
+g(x, y), if~x\in C;\\\zeta(x, y), if~x\in B;\end{cases}because~C\cap B=\emptyset$\\
+$\land g~and~\zeta~are~both~well-defined~bijective~maps.$\\
+$\therefore(C\cup B)\in\mathcal{F}, C\subsetneqq(C\cup B)\subseteq C, which~would~contradict~the~maximality~of~C.~Therefore$\\
+$\alpha+\alpha=|A|+|A|=|C|+|C|=|C\times\{0\}|+|C\times\{1\}|=|(C\times\{0\})\cup(C\times\{1\})|=|C\times\{0, 1\}|=|C|=|A|=\alpha.$\\\\
+$Theorem~8.11.~If~\alpha~and~\beta~are~cardinal~numbers~s.t.~0\neq\beta\leq\alpha~and~\alpha~is~infinite, then~\alpha\beta=\alpha;$\\
+$in~particular, \alpha\aleph_0=\alpha~and~if~\beta~is~finite~\aleph_0\beta=\aleph_0.$\\
+$Sketch~of~proof:$\\
+$(i)~Since~\alpha\leq\alpha\beta\leq\alpha\alpha~it~suffices~(as~in~the~proof~of~Theorem~8.10)~to~prove~\alpha\alpha=\alpha.$\\
+$Let~A~be~an~infinite~set~with~|A|=\alpha~and~\mathcal{F}\coloneqq\{X\subseteq A\mid X~is~infinite\land|X\times X|=|X|\}.$\\\\
+$(ii)~A~is~infinite~by~hypothesis, \exists~D\subseteq A~s.t.~D~is~denumerable~by~Theorem~8.8,$\\
+$D\coloneqq\{d_n\mid n\in\Bbb{N}\land d_i's~are~all~distinct\}.$\\
+$The~map~D\times D\longrightarrow D~given~by~(d_m, d_n)\mapsto 2^{m-1}(2n-1)~for~all~d_i's~in~D~is~bijective,$\\
+$\therefore D\in\mathcal{F}\neq\emptyset.~Furthermore, obviously, \subseteq is~a~partial~order~of~\mathcal{F}.$\\
+$Suppose~L\coloneqq\{X_i\mid i\in I\}~is~a~chain~in~\mathcal{F}, M\coloneqq\bigcup\limits_{i\in I}X_i.~\forall i\in I, \exists~bijective~f_i: X_i\times X_i\longrightarrow X_i.$\\
+$Define~f: M\times M\longrightarrow M: f(x, y)=\begin{cases}
+f_i(x, y), if~X_i\supseteq X_j;\\f_j(x, y), if~X_i\subseteq X_j;
+\end{cases}where~x\in X_i, y\in X_j~for~some~i, j\in I.$\\\\
+$(iii)~X_i's~are~pairwise~comparable~in~L\land f_i's~are~well-defined~bijections, \therefore f~is~bijective, |M\times M|=|M|,$\\
+$X_i\subseteq M\in \mathcal{F}~for~all~i\in I, M~is~an~upper~bound~of~L~in~\mathcal{F}.$\\
+$Thus~by~Zorn's~Lemma~there~is~a~maximal~element~B~of~\mathcal{F}, and~recall~Definition~8.3, |B||B|=|B\times B|=|B|.$\\\\
+$(iv)~Claim~|A|=|B|.~If~not, note~|A|=|B\cup(A\backslash B)|=|B|+|A\backslash B|, \therefore|A\backslash B|>|B|~by~Theorem~8.10~and~8.7.$\\
+$Then~by~Definition~8.4~there~is~a~subset~C~of~A\backslash B~s.t.~|C|=|B|.~Accordingly$\\
+$|C|=|B|=|B\times B|=|B\times C|=|C\times B|=|C\times C|~and~these~sets~are~mutually~disjoint~because~C\cap B=\emptyset.$\\
+$Consequently~by~Definition~8.3~and~Theorem~8.10~|(B\cup C)\times(B\cup C)|=|(B\times B)\cup(B\times C)\cup(C\times B)\cup(C\times C)|$\\
+$=|B\times B|+|B\times C|+|C\times B|+|C\times C|=(|B|+|B|)+(|C|+|C|)=|B|+|C|=|B\cup C|, (B\cup C)\in\mathcal{F},$\\
+$B\subsetneqq(B\cup C)\subseteq B, which~contradicts~the~maximality~of~B.$\\
+$Hence~also~by~Definition~8.3, \alpha\alpha=|A||A|=|B||B|=|B\times B|=|B|=|A|=\alpha.$\\\\
+\end{document}

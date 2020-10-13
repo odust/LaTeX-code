@@ -1,0 +1,123 @@
+\documentclass{article}\usepackage{amsfonts}\usepackage{amssymb}\usepackage{amsmath}\usepackage{mathtools}\usepackage[dvipsnames,usenames]{color}\usepackage{xcolor}\usepackage[margin=0.5cm]{geometry}\begin{document}\fontsize{13pt}{20pt}\selectfont\setlength{\parindent}{0pt}
+$In~this~document, the~Cantor-Bernstein~Theorem~is~frequently~applied,$\\ $and~duducing~subsequent~conclusions~adopts~these~symbols~that~\Bbb{N}~denotes~\Bbb{Z}^+~and$\\
+$~\mathcal{P}^n(R)~denotes~\underbrace{\mathcal{P}(\mathcal{P}(\mathcal{P}(\cdots(\mathcal{P}(\Bbb{R}))\cdots)))}_{n-times},\forall n\in \Bbb{N}\cup\{0\}.
+$\\
+%$\spadesuit\heartsuit\clubsuit\diamondsuit\blacktriangleright\circledcirc\circleddash\circledast\blacksquare\blacklozenge\bigstar$\\
+%「\iffalse...\fi」多行註解語法\\
+$(i)\hspace*{.5em}Bijective~f:$\\
+$$\prod_{i=1}^\infty\Bbb{N}=\Bbb{N}^\Bbb{N}\longrightarrow(0, 1)\setminus\Bbb{Q}:f((a_n)_{n=1}^\infty)=\cfrac{1}{a_1+\cfrac{1}{a_2+\cfrac{1}{a_3+\ddots}}}.$$\\\\
+$(ii)~Bijective~\theta:$\\
+$$\Bbb{N}^\Bbb{N}\longrightarrow\mathcal{P}(\Bbb{N})\setminus\{\mathcal{S}\subseteq\Bbb{N}\mid|\mathcal{S}|<\infty\}:\theta((a_n)_{n=1}^\infty)=\left\{\sum\limits_{i=1}^na_i\mid n, a_i's\in\Bbb{N}\right\}.$$\\
+$In~actuality, |[0, 1)|=|\mathcal{P}(\Bbb{N})\setminus K|\leq|\mathcal{P}(\Bbb{N})|=|\{0, 1\}^\Bbb{N}|\leq|A^\Bbb{N}|\leq|\Bbb{N}^\Bbb{N}|\leq|\mathcal{P}(\Bbb{N}\times\Bbb{N})|=|\mathcal{P}(\Bbb{N})|\leq|[0, 1)|.$\\
+$(where~2\leq|A|<\infty~and~K=\{\mathcal{S}\subseteq\Bbb{N}\mid \exists k\in\Bbb{N}~s.t.~[k, \infty)\cap\Bbb{N}\subseteq\mathcal{S}\}~;$\\
+$consider~the~bijection~f:[0, 1)\longrightarrow\mathcal{P}(\Bbb{N})\setminus K:f(x)=\{j\in\Bbb{N}\mid b_j=1\}$\\
+$via~x's~binary~decimal~expansion\sum\limits_{j=1}^\infty\dfrac{b_j}{2^j}~with~b_j's\in\{0, 1\},$\\
+$where~the~binary~representation~ending~in~infinitely~consecutive~(repeating)~1's~is~excluded$\\
+$so~that~the~binary~representation~is~unique,$\\
+$and~the~injection~g:\mathcal{P}(\Bbb{N})\longrightarrow[0,1):g(T)=\sum\limits_{i=1}^\infty\dfrac{d_i}{10^i},where~d_i=\mathcal{X}_T(i),$\\
+$and~in~reality, g~is~injective\Rightarrow|\Bbb{N}|<|\mathcal{P}(\Bbb{N})|\leq|[0,1)|\leq|\Bbb{R}|\Rightarrow|\mathcal{P}(\Bbb{N})|=|\Bbb{R}|=|(0, 1)|$\\
+$by~the~uncountability~of~\mathcal{P}(\Bbb{N})~and~the~Continuum~Hypothesis.)$\\\\
+$(iii)~|\mathcal{P}(\Bbb{R})|=|\{0, 1\}^\Bbb{R}|\leq|A^\Bbb{R}|\leq|\Bbb{Z}^\Bbb{R}|\bigg(=\left|\prod\limits_{i\in\Bbb{R}}\Bbb{Z}\bigg|\right)\leq|\mathcal{P}(\Bbb{R}\times\Bbb{Z})|=|\mathcal{P}(\Bbb{R})|.$\\
+$(where~2\leq|A|<\infty.~\{0, 1\}^\Bbb{R}\hookrightarrow\Bbb{Z}^\Bbb{R}~as~monoids~with~common~product.)$\\\\
+$(iv)~|\Bbb{R}^\Bbb{N}|=|(\{0, 1\}^\Bbb{N})^\Bbb{N}|=|\{0, 1\}^{\Bbb{N}\times\Bbb{N}}|=|\{0, 1\}^\Bbb{N}|=|\Bbb{R}|.$\\\\
+$(v)~|\Bbb{R}^\Bbb{R}|=|(\{0, 1\}^\Bbb{N})^\Bbb{R}|=|\{0, 1\}^{\Bbb{N}\times\Bbb{R}}|=|\{0, 1\}^\Bbb{R}|=|\mathcal{P}(\Bbb{R})|.$\\\\
+$(vi)~|\mathcal{P}(\Bbb{R})|\leq|\mathcal{P}(\Bbb{R})\times\mathcal{P}(\Bbb{R})|\leq|\mathcal{P}(\Bbb{R})^\Bbb{N}|\leq|\mathcal{P}(\Bbb{R})^\Bbb{R}|=|(\{0, 1\}^\Bbb{R})^\Bbb{R}|=|\{0, 1\}^{\Bbb{R}\times\Bbb{R}}|=|\{0, 1\}^\Bbb{R}|=|\mathcal{P}(\Bbb{R})|.$\\\\
+$(vii)~Bijective~\pi:(\{0, 1\}^X)^Y\longrightarrow\{0, 1\}^{X\times Y}(or~\{0, 1\}^{Y\times X}):f\mapsto\pi(f).$\\
+$(where~\forall f\in(\{0, 1\}^X)^Y, \forall(x, y)\in X\times Y, f(y)\in\{0, 1\}^X, \pi(f)(x, y)\coloneqq f(y)(x)\in\{0, 1\}, \pi(f)\in\{0, 1\}^{X\times Y}.)$\\\\
+$(viii)~(supplement)~Bijective~f:[0, 1]\times[0, 1]\longrightarrow[0, 1]:f(x, y)=\begin{cases}\sum\limits_{i=1}^\infty\dfrac{c_i}{10^i}, if~x^2+y^2\neq 0;\\0, if~x=y=0;\end{cases}$\\
+$where~c_i=0~for~all~odd~(or~even)~i~and~c_j\neq 0~for~some~even~(or~odd)~j$\\
+$if~x=0\neq y~(or~y=0\neq x), respectively; x=\sum\limits_{i=1}^\infty\dfrac{a_i}{10^i}, y=\sum\limits_{i=1}^\infty\dfrac{b_i}{10^i}, c_i=\begin{cases}a_{\frac{i+1}{2}}, if~i~is~odd;\\b_{\frac{i}{2}}, otherwise;\end{cases}$\\
+$for~some~a_i's,b_i's~in~\{0, 1, 2, 3,…, 9\}~and~all~i\in\Bbb{N}~if~x\neq 0\neq y.$\\
+$Proof:$\\
+$\forall t\in(0, 1], the~decimal~representation~of~t~ending~in$\\
+$infinitely~consecutive~(repeating)~0's~is~excluded~so~that~the~decimal~representation~is~unique.$\\
+$\forall(x, y), (x', y'), r\in[0, 1], x=0~or\sum\limits_{i=1}^\infty\dfrac{a_i}{10^i}, y=0~or\sum\limits_{i=1}^\infty\dfrac{b_i}{10^i}, x'=0~or\sum\limits_{i=1}^\infty\dfrac{a_i'}{10^i}, y'=0~or\sum\limits_{i=1}^\infty\dfrac{b_i'}{10^i},$\\
+$f(x', y')=0~or\sum\limits_{i=1}^\infty\dfrac{c_i'}{10^i}, r=0~or\sum\limits_{i=1}^\infty\dfrac{s_i}{10^i}~for~some~a_i's, b_i's, (a_i')'s, (b_i')'s, s_i's, (c_i')'s~in~\{0, 1, 2, 3,…, 9\}.$\\\\
+$(1)~Suppose~(x, y)=(x', y').~If~x=y=0, x'=y'=0, f(x, y)=f(x', y')=0; if~x=0\neq y, x'=0\neq y',$\\
+$c_i=0=c_i'~for~all~odd~i~and~c_i=b_{\frac{i}{2}}=b_{\frac{i}{2}}'=c_i'~for~all~even~i, \therefore c_i=c_i', \forall i\in\Bbb{N}, f(x, y)=f(x', y');$\\
+$if~y=0\neq x, y'=0\neq x', c_i=0=c_i'~for~all~even~i~and~c_i=a_{\frac{i+1}{2}}=a_{\frac{i+1}{2}}'=c_i'~for~all~odd~i,$\\
+$\therefore c_i=c_i', \forall i\in \Bbb{N}, f(x, y)=f(x', y'); if~x\neq 0\neq y, x'\neq 0\neq y',$\\
+$c_i=a_{\frac{i+1}{2}}=a_{\frac{i+1}{2}}'=c_i'~for~all~odd~i~and~c_i=b_{\frac{i}{2}}=b_{\frac{i}{2}}'=c_i'~for~all~even~i,$\\
+$\therefore c_i=c_i', \forall i\in\Bbb{N}, f(x, y)=f(x', y'), f~is~well-defined.$\\\\
+$(2)~Suppose~f(x, y)=f(x', y').~If~f(x, y)=0=f(x', y'), x=y=0=x'=y', (x, y)=0=(x', y'); if~not,$\\
+$f(x, y)=f(x', y')\neq 0, c_i=c_i', \forall i\in\Bbb{N}.$\\
+$\therefore x=0=x'\wedge b_k=c_{2k}=c_{2k}'=b_k', \forall k\in\Bbb{N}$\\
+$if~c_i=0=c_i'~for~all~odd~i\wedge c_j=c_j'\neq 0~for~some~even~j\Rightarrow(x, y)=(x', y');$\\
+$or~y=0=y'\wedge a_k=c_{2k-1}=c_{2k-1}'=a_k', \forall k\in\Bbb{N}$\\
+$if~c_i=0=c_i'~for~all~even~i\wedge c_j=c_j'\neq 0~for~some~odd~j\Rightarrow(x, y)=(x', y');$\\
+$or~a_i=c_{2k-1}=c_{2k-1}'=a_i'\wedge b_i=c_{2k}=c_{2k}'=b_i', \forall i\in\Bbb{N}$\\
+$if~c_i=c_i'\neq 0~for~some~odd~i\wedge c_j=c_j'\neq 0~for~some~even~j\Rightarrow(x, y)=(x', y'), f~is~injective.$\\\\
+$(3)~If~r=0, f(0, 0)=r; if~s_i=0~for~all~odd~i\wedge s_j\neq 0~for~some~even~j, f\left(0, \sum\limits_{i=1}^\infty\dfrac{s_{2i}}{10^i}\right)=r;$\\
+$if~s_i=0~for~all~even~i\wedge s_j\neq 0~for~some~odd~j, f\left(\sum\limits_{i=1}^\infty\dfrac{s_{2i-1}}{10^i} ,0\right)=r;$\\
+$if~s_i\neq 0~for~some~odd~i\wedge s_j\neq 0~for~some~even~j, f\left(\sum\limits_{i=1}^\infty\dfrac{s_{2i-1}}{10^i}, \sum\limits_{i=1}^\infty\dfrac{s_{2i}}{10^i}\right)=r, f~is~surjective.$\\\\
+$(ix)~(supplement)~Bijective~f:(0, 1)\longrightarrow[0, 1]:f(x)=\begin{cases}0, if~x=\dfrac{1}{2};\\\dfrac{1}{n-2}, if~x=\dfrac{1}{n}~for~some~n\in\Bbb{N}\cap[3, \infty);\\x, otherwise.\end{cases}$\\
+$(x)~(supplement)~To~prove~|\Bbb{R}|=|(0, 1)|.$\\
+$Proof~1:bijective~f:(-1, 1)\longrightarrow\Bbb{R}:f(x)=\begin{cases}\dfrac{x}{1-x}, if~x\in(0, 1);\\\dfrac{x}{1+x}, otherwise.\end{cases}(consider~y=\dfrac{1}{x}, offset~and~symmetry.)$\\\\
+$Proof~2:bijective~f:\Bbb{R}\longrightarrow(0, 1):f(x)=\dfrac{\exp(x)}{\exp(x)+1}.$\\\\
+$(xi)~(supplement)~To~prove~|\Bbb{N}\times\Bbb{N}|=|\Bbb{N}|.$\\
+$Proof~1:Claim~bijective~f:\Bbb{N}\times\Bbb{N}\longrightarrow\Bbb{N}:f(i, j)=2^{i-1}(2j-1).$\\
+$(1)~f, trivially, is~well-defined.$\\
+$(2)~\forall(i, j), (k, l)\in\Bbb{N}\times\Bbb{N}~with~f(i, j)=f(k, l), 2^{i-1}(2j-1)=2^{k-1}(2l-1).~If~k=1, 2^{i-1}(2j-1)=2l-1~is~odd,$\\
+$\therefore i=1=k, j=l.~If~k\geq 2, k-1\geq 1, 2^{k-1}\geq 2, \dfrac{2^{i-1}(2j-1)}{2^{k-1}}=2l-1\in\Bbb{N}\wedge2^{k-1}\nmid 2j-1~is~odd,$\\
+$\therefore2^{k-1}\mid2^{i-1}, and~note~2^{k-1}, 2^{i-1}\in\Bbb{N}, \therefore2^{k-1}\leq2^{i-1};$\\
+$analogously, 2^{k-1}\geq2^{i-1}, \therefore2^{k-1}=2^{i-1}, i=k, j=l, f~is~injective.$\\
+$(3)~\forall m\in\Bbb{N}, if~m~is~even, \exists n\in\Bbb{N}, primes~p_1, p_2, p_3,\dots, p_n~with~p_1<p_2<p_3<\dots<p_n,$\\
+$\{r_1, r_2, r_3,\dots, r_n\}\subseteq\Bbb{N}~s.t.~m=p_1^{r_1}p_2^{r_2}p_3^{r_3}\dots p_n^{r_n}~by~the~Fundamental~Thm.~of~Arithmetic,$\\
+$\therefore p_1=2\wedge p_2, p_3,\dots,p_n~is~prime, \therefore a\coloneqq p_2^{r_2}p_3^{r_3}\dots p_n^{r_n}~is~odd, take~i=r_1+1\in\Bbb{N}, j=\dfrac{a+1}{2}\in\Bbb{N},$\\
+$then~f(i, j)=m; if~m~is~odd, take~i=1, j=\dfrac{m+1}{2}\in\Bbb{N}, then~f(i, j)=m.~Accordingly, f~is~surjective.$\\\\
+$Proof~2:Claim~bijective~f:\Bbb{N}\times\Bbb{N}\longrightarrow\Bbb{N}:f(i, j)=\dfrac{\big(1+(i+(j-1)-1)\big)(i+(j-1)-1)}{2}+j\in\Bbb{N},$\\
+$\forall i\in\Bbb{N}, j\in\{1, 2, 3,\dots, i+(j-1)\}.~See~the~following~attachment.$\\\\
+$Proof~3:$\\
+$(1)~\forall n\in\Bbb{N}, A_n\coloneqq\{(n, 1), (n, 2), (n, 3),\dots,(n, n)\}, A_i's~are~mutually~disjoint,$\\
+$D\coloneqq\{(i, j)\in\Bbb{N}\times\Bbb{N}\mid i\geq j\}=\bigcup_{n\in\Bbb{N}}A_n, define~f:\Bbb{N}\times\Bbb{N}\longrightarrow D:f(i, j)=\big(i+(j-1), j\big), f~is~obviously~bijective.$\\
+$\color{PineGreen}(i.e.~\forall j, horizontally~push~(i, j)~rightward~by~(j-1)~units.)$\\
+$Define~g:D\longrightarrow \Bbb{N}:g(i, j)=\dfrac{(1+(i-1))(i-1)}{2}+j=\dfrac{i(i-1)}{2}+j\in\Bbb{N}.$\\\\
+$(2)(a)~\forall(i, j_1), (i, j_2)\in D~with~j_1\leq j_2, g(i, j_1)=\dfrac{i(i-2)}{2}+j_1\leq\dfrac{i(i-1)}{2}+j_2=g(i, j_2);$\\
+$(b)~g(i, i)=\dfrac{i(i-1)}{2}+i=\dfrac{(i+1)i}{2}+1-1=g(i+1, 1)-1.$\\\\
+$(3)~Claim~g~is~bijective.~(a)~Trivially, g~is~well-defined.$\\
+$(b)~\forall(i, j), (k, l)\in D~with~g(i, j)=g(k, l).~If~i\neq k, we~may~assume~i>k.\therefore 1\leq l\leq k\leq i-1, 0\leq k-1\leq i-2,$\\
+$g(k, l)=\dfrac{k(k-1)}{2}+l\leq\dfrac{(i-1)(i-2)}{2}+(i-1)=g(i-1, i-1)$\\
+$<g(i, 1)\leq g(i, j)~by~(2)-(b)~and~(2)-(a), C!.$\\
+$~Hence, i=k.~Note~g(i, j)=g(k, l)\Rightarrow\dfrac{i(i-1)}{2}+j=\dfrac{k(k-1)}{2}+l\Rightarrow j=l\Rightarrow(i, j)=(k, l).~Thus, g~is~injective.$\\
+$(c)~\forall p, i\in\Bbb{N}, g(i, 1)=\dfrac{i(i-1)}{2}+1=\dfrac{1}{2}\left(\left(i-\dfrac{1}{2}\right)^2+\dfrac{7}{4}\right)\rightarrow\infty~as~i\rightarrow\infty,$\\
+$I\coloneqq\{i\in\Bbb{N}\mid p<g(i, 1)\}\neq\emptyset, v\coloneqq minI\in\Bbb{N}~by~well-ordering~principle, v-1\notin I,$\\
+$g(v-1, 1)\leq p<g(v, 1)=g(v-1, v-1)+1~by~(2)-(b), g(v-1, 1)\leq p\leq g(v-1, v-1).$\\
+$\therefore 1\leq m\coloneqq p-g(v-1, 1)+1\leq g(v-1, v-1)-g(v-1, 1)+1=v-1,$\\
+$\therefore(v-1, m)\in D\wedge g(v-1, m)=\dfrac{(v-1)(v-2)}{2}+m=(g(v-1, 1)-1)+m=p, g~is~surjective.$\\\\
+$(4)~It~follows~from~(3)~that~g\circ f:\Bbb{N}\times\Bbb{N}\longrightarrow \Bbb{N}~is~bijective.$\\\\
+$Proof~4:$\\
+$(1)~\forall n\in\Bbb{N}, A_n\coloneqq\{(n+1, 1), (n+1, 2), (n+1, 3),\dots,(n+1, n)\}, A_i's~are~mutually~disjoint,$\\
+$D_1\coloneqq\{(i, j)\in\Bbb{N}\times\Bbb{N}\mid i>j\}=\bigcup_{n\in\Bbb{N}}A_n, D_2\coloneqq\{(i, j)\in\Bbb{N}\times\Bbb{N}\mid i<j\},$\\
+$D_3\coloneqq\{(i, i)\in\Bbb{N}\times\Bbb{N}\mid i\in\Bbb{N}\}, D_1\cup D_2\cup D_3=\Bbb{N}\times\Bbb{N}, D_i's~are~pairwise~disjoint;$\\
+$E_1\coloneqq\{3t-2\mid t\in\Bbb{N}\}, E_2\coloneqq\{3t-1\mid t\in\Bbb{N}\}, E_3\coloneqq\{3t\mid t\in\Bbb{N}\}, E_1\cup E_2\cup E_3=\Bbb{N}, E_i's~are~pairwise~disjoint.$\\
+$Define~f_1:D_1\longrightarrow \Bbb{N}:f_1(i, j)=\dfrac{\big(1+((i-1)-1)\big)((i-1)-2+1)}{2}+j=\dfrac{(i-1)(i-2)}{2}+j\in\Bbb{N}.$\\\\
+$(2)(a)~\forall(i, j_1), (i, j_2)\in D_1~with~j_1\leq j_2, f_1(i, j_1)=\dfrac{(i-1)(i-2)}{2}+j_1\leq\dfrac{(i-1)(i-2)}{2}+j_2=f_1(i, j_2);$\\
+$(b)~Note~i\geq 2, f_1(i, i-1)=\dfrac{(i-1)(i-2)}{2}+(i-1)=\dfrac{i(i-1)}{2}+1-1=f_1(i+1, 1)-1.$\\\\
+$(3)~Claim~f_1~is~bijective.~(a)~Trivially, f_1~is~well-defined.$\\
+$(b)~\forall(i, j), (k, l)\in D_1~with~f_1(i, j)=f_1(k, l).~If~i\neq k, we~may~assume~i>k.\therefore 2\leq k\leq i-1, 0\leq k-2\leq i-3,$\\
+$f_1(k, l)=\dfrac{(k-1)(k-2)}{2}+l\leq\dfrac{((i-1)-1)((i-1)-2)}{2}+(k-1)\leq\dfrac{(i-2)(i-3)}{2}+(i-2)=f_1(i-1, i-2)$\\
+$<f_1(i, 1)\leq f_1(i, j)~by~(2)-(b)~and~(2)-(a), C!.~Hence, i=k.~Note~f_1(i, j)=f_1(k, l)$\\
+$\Rightarrow\dfrac{(i-1)(i-2)}{2}+j=\dfrac{(k-1)(k-2)}{2}+l\Rightarrow j=l\Rightarrow(i, j)=(k, l).~Thus, f_1~is~injective.$\\
+$(c)~\forall p, i\in\Bbb{N}~with~i\geq 2, f_1(i, 1)=\dfrac{(i-1)(i-2)}{2}+1=\dfrac{1}{2}\left(\left(i-\dfrac{3}{2}\right)^2+\dfrac{7}{4}\right)\rightarrow\infty~as~i\rightarrow\infty,$\\
+$I\coloneqq\{i\in\Bbb{N}\cap[2,\infty)\mid p<f_1(i, 1)\}\neq\emptyset, 2\leq v\coloneqq minI\in\Bbb{N}~by~well-ordering~principle, v-1\notin I,$\\
+$f_1(v-1, 1)\leq p<f_1(v, 1)=f_1(v-1, v-2)+1~by~(2)-(b), f_1(v-1, 1)\leq p\leq f_1(v-1, v-2).$\\
+$\therefore 1\leq m\coloneqq p-f_1(v-1, 1)+1\leq f_1(v-1, v-2)-f_1(v-1, 1)+1=v-2, v-1\geq 2,$\\
+$\therefore(v-1, m)\in D_1\wedge f_1(v-1, m)=\dfrac{(v-2)(v-3)}{2}+m=(f_1(v-1, 1)-1)+m=p, f_1~is~surjective.$\\\\
+$(4)~Likewise, define~the~following~bijections~f_2:D_2\longrightarrow \Bbb{N}:f_2(i, j)=\dfrac{(j-1)(j-2)}{2}+i\in\Bbb{N},$\\
+$f_3:D_3\longrightarrow \Bbb{N}:f_3(i, i)=i, g_1:\Bbb{N}\longrightarrow E_1:g_1(t)=3t-2, g_2:\Bbb{N}\longrightarrow E_2:g_2(t)=3t-1, g_3:\Bbb{N}\longrightarrow E_3:g_3(t)=3t.$\\\\
+$(5)~Define~h:\Bbb{N}\times\Bbb{N}\longrightarrow\Bbb{N}:h(i, j)=\begin{cases}(g_1\circ f_1)(i, j), if~x\in D_1;\\(g_2\circ f_2)(i, j), if~x\in D_2;\\(g_3\circ f_3)(i, j), if~x\in D_3.\end{cases}It~follows~from~(3)~and~(4)~that~h~is~bijective.$\\\\
+$Furthermore, accordingly,\forall n\in\Bbb{N},A_n~is~denumerable\Rightarrow\bigcup\limits_{n\in\Bbb{N}}A_n~is~denumerable.~Proof:$\\
+$(1)~\forall n\in\Bbb{N}, B_1\coloneqq A_1, B_n\coloneqq A_n\bigg\backslash\bigcup\limits_{i=1}^{n-1}A_i, B_i's~are~pairwise~disjoint\wedge\bigcup\limits_{n\in\Bbb{N}}B_n=\bigcup\limits_{n\in\Bbb{N}}A_n.$\\\\
+$(2)~\forall n\in\Bbb{N}, I_n\coloneqq\{(n, m)\mid m\in\Bbb{N}\}\sim\Bbb{N}, I_i's~are~mutually~disjoint, B_n~is~countable, \exists~injective~f_n:B_n\longrightarrow I_n.$\\
+$Define~f:\bigcup\limits_{n\in\Bbb{N}}B_n\longrightarrow\Bbb{N}\times\Bbb{N}=\bigcup\limits_{n\in\Bbb{N}}I_n:f(x)=f_n(x), if~x\in B_n~for~some~n\in\Bbb{N}.$\\
+$Then~f~is~injective, |A_1|\leq\left|\bigcup\limits_{n\in\Bbb{N}}A_n\right|=\left|\bigcup\limits_{n\in\Bbb{N}}B_n\right|\leq|\Bbb{N}\times\Bbb{N}|=|\Bbb{N}|,$\\
+$\therefore\bigcup\limits_{n\in\Bbb{N}}A_n~is~infinite~and~countable; that~is, \bigcup\limits_{n\in\Bbb{N}}A_n~is~denumerable.$\\\\
+$(xii)~(supplement)~\forall n\in\Bbb{N}\cup\{0\}, |\mathcal{P}^n(\Bbb{R})\times\mathcal{P}^n(\Bbb{R})|=|\mathcal{P}^n(\Bbb{R})|.$\\
+$Proof:|\Bbb{R}|=|\Bbb{R}\times\{1\}|\leq|\Bbb{R}\times\Bbb{N}|\leq|\Bbb{R}\times\Bbb{R}|\leq|\Bbb{R}^\Bbb{N}|=|(\{0, 1\}^\Bbb{N})^\Bbb{N}|=|\{0, 1\}^{\Bbb{N}\times\Bbb{N}}|=|\{0, 1\}^\Bbb{N}|=|\Bbb{R}|;$\\
+$suppose~|\mathcal{P}^{n-1}(\Bbb{R})\times\Bbb{N}|=|\mathcal{P}^{n-1}(\Bbb{R})|~for~n\in\Bbb{N};$\\
+$|\mathcal{P}^n(\Bbb{R})|=|\mathcal{P}^n(\Bbb{R})\times\{1\}|\leq|\mathcal{P}^n(\Bbb{R})\times\Bbb{N}|\leq|\mathcal{P}^n(\Bbb{R})\times\mathcal{P}^n(\Bbb{R})|\leq|(\mathcal{P}^n(\Bbb{R}))^\Bbb{N}|=|(\{0, 1\}^{\mathcal{P}^{n-1}(\Bbb{R})} )^\Bbb{N}|$\\
+$=|\{0, 1\}^{\mathcal{P}^{n-1}(\Bbb{R})\times\Bbb{N}}|=|\{0, 1\}^{\mathcal{P}^{n-1}(\Bbb{R})}|~(inductive~hypothesis)=|\mathcal{P}(\mathcal{P}^{n-1}(\Bbb{R}))|=|\mathcal{P}^n(\Bbb{R})|.$\\\\
+$(xiii)~(supplement)~\forall n\in\Bbb{N}, m\in\Bbb{N}\cup\{0\}~with~n\geq m, |\mathcal{P}^n(\Bbb{R})\times\mathcal{P}^m(\Bbb{R})|=|\mathcal{P}^n(\Bbb{R})|.$\\
+$Proof:|\mathcal{P}^n(\Bbb{R})|=|\mathcal{P}^n(\Bbb{R})\times\{1\}|\leq|\mathcal{P}^n(\Bbb{R})\times\Bbb{N}|\leq|\mathcal{P}^n(\Bbb{R})\times\mathcal{P}^m(\Bbb{R})|\leq|\mathcal{P}^n(\Bbb{R})\times\mathcal{P}^n(\Bbb{R})|\leq|(\mathcal{P}^n(\Bbb{R}))^\Bbb{N}|$\\
+$=|(\{0, 1\}^{\mathcal{P}^{n-1}(\Bbb{R})})^\Bbb{N}|=|\{0, 1\}^{\mathcal{P}^{n-1}(\Bbb{R})\times\Bbb{N}}|=|\{0, 1\}^{\mathcal{P}^{n-1}(\Bbb{R})}|~(by~(xii))=|\mathcal{P}(\mathcal{P}^{n-1}(\Bbb{R}))|=|\mathcal{P}^n(\Bbb{R})|.$\\
+\end{document}

@@ -1,0 +1,34 @@
+\documentclass{article}\usepackage{amsfonts}\usepackage{amssymb}\usepackage{amsmath}\usepackage{mathtools}\usepackage[dvipsnames,usenames]{color}\usepackage{xcolor}\usepackage[margin=0.5cm]{geometry}\begin{document}\fontsize{13pt}{20pt}\selectfont\setlength{\parindent}{0pt}
+%\usepackage[left=0.5cm,right=0.5cm,top=0.5cm,bottom=0.5cm]{geometry}
+To\,begin~with\\[0.7cm]\LaTeX!$f(x, y)=\bigg(\dfrac{2|x|+2|y|}{2}\bigg)$\\
+$$\cos a-\cos b=-2\sin (\frac{a+b}{2})\sin (\frac{a-b}{2})$$\\%公式置中
+$Q: (Aut\mathbb{Z}_{11}^*, \circ)\cong(\Bbb{Z}_4, +).$\\
+$(In~actuality, Aut\Bbb{Z}\cong\Bbb{Z}_2, Aut\Bbb{Z}_6\cong\Bbb{Z}_2, Aut\Bbb{Z}_8\cong\Bbb{Z}_2\oplus\Bbb{Z}_2, Aut\Bbb{Z}_p\cong\Bbb{Z}_{p-1}~for~prime~p.)$\\
+$Proof:$\\
+$(i)$\\
+$2^0=1, 2^1=2, 2^2=4, 2^3=8, 2^4=5, 2^5=10, 2^6=9, 2^7=7, 2^8=3, 2^9=6, 2^{10}=1, min\{s\in\Bbb{N}\mid2^s=1\}=10.$\\
+$\therefore(\Bbb{Z}_{11}^*, \cdot)=(<2>, \cdot)~is~cyclic, 1\in B\coloneqq\{s\in\Bbb{N}\cap[1, 9]\mid(\Bbb{Z}_{11}^*, \cdot)=(<2^s>, \cdot)\}\neq\emptyset.$\\
+$(In~reality,~p~is~prime\Rightarrow(\Bbb{Z}_p^*, \cdot)~is~cyclic.)$\\
+$(ii)$\\
+$s\in B\equiv\exists n\in\Bbb{Z}~s.t.~(2^s)^n=2\equiv10|sn-1\equiv\exists m\in\Bbb{Z}~s.t.~sn+10m=1\equiv gcd(s, 10)=1\equiv s\in\{1, 3, 7, 9\};$\\
+$that~is, 2=2^1, 6=2^9, 7=2^7, 8=2^3~are~the~generators~of~\Bbb{Z}_{11}^*.$\\
+$(iii)$\\
+$\forall\rho\in Aut\Bbb{Z}_{11}^*, <2>=Aut\Bbb{Z}_{11}^*=<\rho(2)>\equiv\rho(2)\in\{2, 6, 7, 8\}.$\\
+$Define~\rho_{26}:\Bbb{Z}_{11}^*\longrightarrow\Bbb{Z}_{11}^*:\rho_{26}(2^i)=6^i, where~i\in\Bbb{Z}\cap[0, 9].\therefore\rho_{26}~is~surjetive~immediately.$\\
+$Claim~\rho_{26}\in Aut\Bbb{Z}_{11}^*.$\\
+$\forall i, j\in\Bbb{Z}\cap[0, 9], 2^i=2^j\Leftrightarrow2^{i-j}=1\Leftrightarrow10|i-j\Leftrightarrow6^{i-j}=1\Leftrightarrow6^i=6^j,$\\
+$where~i-j=10q+r~for~some~q\in\Bbb{Z}, r\in\Bbb{Z}\cap[0, 9]\Rightarrow r=0; \rho_{26}~is~well-defined~and~injective.$\\
+$\because<6>=Aut\Bbb{Z}_{11}^*, \rho_{26}(2^i\cdot2^j)=\rho_{26}(2^{i+j})=6^{i+j}=6^i\cdot6^j=\rho_{26}(2^i)\cdot\rho_{26}(2^j), \therefore\rho_{26}~is~an~epimorphism.$\\
+$(iv)$\\
+$Analogously, define~\rho_{22}, \rho_{27}, \rho_{28}:\Bbb{Z}_{11}^*\longrightarrow\Bbb{Z}_{11}^*:\rho_{22}(2^i)=2^i, \rho_{27}(2^i)=7^i, \rho_{28}(2^i)=8^i, where~i\in\Bbb{Z}\cap[0, 9].$\\
+$Subsequently, similar~to~\rho_{26}, \rho_{22}(=\iota), \rho_{27}~and~\rho_{28}~are~distinct~automorphisms, \therefore\rho\in\{\iota, \rho_{26}, \rho_{27}, \rho_{28}\}.$\\
+$\therefore Aut\Bbb{Z}_{11}^*=\{\iota, \rho_{26}, \rho_{27}, \rho_{28}\}.~Now~note~\rho_{27}^2(2)=\rho_{27}(7)=\rho_{27}(2^7)=7^7=6\ne2, \therefore\rho_{27}^2\ne\iota, |\rho_{27}|\ne2.$\\
+$Hence, Klein~4-group\ncong Aut\Bbb{Z}_{11}^*\cong\Bbb{Z}_4.$\\
+$(Alternatively, define~\lambda:Aut\Bbb{Z}_{11}^*\longrightarrow\Bbb{Z}_4:\iota\mapsto0, \rho_{26}\mapsto2,\rho_{27}\mapsto1,\rho_{28}\mapsto3.$\\
+$\therefore\lambda~is~bijective~immediately.~Claim~\lambda~is~a~homomorphism.$\\
+$The~operation~preservation~between~\iota~and~\rho_{2k}'s~is~trivial.$\\
+$\lambda(\rho_{26}\circ\rho_{27})=\lambda(\rho_{28})=3=2+1=\lambda(\rho_{26})+\lambda(\rho_{27}), \lambda(\rho_{27}\circ\rho_{26})=\lambda(\rho_{28})=3=1+2=\lambda(\rho_{27})+\lambda(\rho_{26}),$\\
+$\lambda(\rho_{26}\circ\rho_{28})=\lambda(\rho_{27})=1=2+3=\lambda(\rho_{26})+\lambda(\rho_{28}), \lambda(\rho_{28}\circ\rho_{26})=\lambda(\rho_{27})=1=3+2=\lambda(\rho_{28})+\lambda(\rho_{26}),$\\
+$\lambda(\rho_{27}\circ\rho_{28})=\lambda(\iota)=0=1+3=\lambda(\rho_{27})+\lambda(\rho_{28}), \lambda(\rho_{28}\circ\rho_{27})=\lambda(\iota)=0=3+1=\lambda(\rho_{28})+\lambda(\rho_{27}).$\\
+$Thus, \lambda~is~an~isomorphism, Aut\Bbb{Z}_{11}^*\cong\Bbb{Z}_4.)$\\
+\end{document}

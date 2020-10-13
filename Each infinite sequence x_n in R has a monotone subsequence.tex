@@ -1,0 +1,16 @@
+\documentclass{article}\usepackage{amsfonts}\usepackage{amssymb}\usepackage{amsmath}\usepackage{mathtools}\usepackage[dvipsnames,usenames]{color}\usepackage{xcolor}\usepackage[margin=0.5cm]{geometry}\begin{document}\fontsize{13pt}{20pt}\selectfont\setlength{\parindent}{0pt}
+$Lemma:~Each~infinite~sequence~(x_n)_{n=1}^\infty~in~\Bbb{R}~has~a~monotone~subsequence.$\\
+$Proof:~B\coloneqq\{n\in\Bbb{N}\mid x_n<x_m~for~all~m\in\Bbb{N}\cap(n, \infty)\}\subseteq\Bbb{N}.$\\
+$(i)~If~B=\emptyset, \Bbb{N}\cap B=\emptyset, i_1\coloneqq 1\notin B.~\exists i_2\in\Bbb{N}\cap(i_1, \infty)~s.t.~x_{i_1}\geq x_{i_2}.$\\
+$Suppose~\forall n\in\Bbb{N}\cap[3, \infty), \exists i_n\in\Bbb{N}\cap(i_{n-1}, \infty)~s.t.~x_{i_{n-1}}\geq x_{i_n}.$\\
+$~Analogously, i_n\notin B, \exists i_{n+1}\in\Bbb{N}\cap(i_n, \infty)~s.t.~x_{i_n}\geq x_{i_{n+1}}~by~inductive~hypothesis.$\\
+$Consequently, \forall n\in\Bbb{N}\cap[2, \infty), \exists i_n\in\Bbb{N}\cap(i_{n-1}, \infty)~s.t.~x_{i_{n-1}}\geq x_{i_n}~by~induction$\\
+$and~hence~the~subsequence~(x_{i_n})_{n=1}^\infty~decreases.$\\
+$(ii)~If~\emptyset\neq B~is~finite, maxB~exists~in~B\cap\Bbb{N}, i_1\coloneqq maxB+1, [i_1, \infty)\cap B=\emptyset.$\\
+$Similar~to~(i), there~exists~a~decreasing~subsequence~(x_{i_n})_{n=1}^\infty.$\\
+$(iii)~If~B~is~denumerable, there~exists~an~i_1\in B, \therefore\exists i_2\in B~s.t.~i_1<i_2; otherwise, B~is~finite.$\\
+$Suppose~\forall n\in\Bbb{N}\cap[3, \infty), \exists i_n\in B~s.t.~i_{n-1}<i_n.$\\
+$Likewise, \exists i_{n+1}\in B~s.t.~i_n<i_{n+1}~by~inductive~hypothesis; otherwise, B~is~finite$\\
+$Thus, \exists (i_n)_{n=1}^\infty~in~B~s.t.~(i_n)_{n=1}^\infty~strictly~increases~by~induction.$\\
+$Accordingly, subsequence~(x_{i_n})_{n=1}^\infty~is~strictly~increasing.$\\
+\end{document}

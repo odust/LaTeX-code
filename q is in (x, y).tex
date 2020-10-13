@@ -1,0 +1,10 @@
+\documentclass{article}\usepackage{amsfonts}\usepackage{amssymb}\usepackage{amsmath}\usepackage{mathtools}\usepackage[dvipsnames,usenames]{color}\usepackage{xcolor}\usepackage[margin=0.5cm]{geometry}\begin{document}\fontsize{13pt}{20pt}\selectfont\setlength{\parindent}{0pt}
+$Proposition.~\forall x, y\in\Bbb{R}~with~x<y, \exists q\in\Bbb{Q}~s.t.~x<q<y.$\\
+$Proof:$\\
+$By~Archimedean~Principle, \exists n\in\Bbb{N}~s.t.~n>\dfrac{1}{y-x}, where~x<y\Rightarrow y-x>0.$\\
+$\therefore nx<[nx]+1\leq nx+1<ny, x<q\coloneqq\dfrac{[nx]+1}{n}<y.$\\
+$(Motivation:If~y-x>1, x<q\coloneqq[x]+1\leq x+1<y; thus, find~an~adequately~large~n\in\Bbb{N}~to~make~n(y-x)>1\equiv ny-nx>1.)$\\\\
+$Corollary.~\forall x, y\in\Bbb{R}~with~x<y, \exists r\in\Bbb{R}\setminus\Bbb{Q}~s.t.~x<r<y.$\\
+$Proof:$\\
+$By~the~preceding~proposition, \exists q\in\Bbb{Q}\cap(x-\sqrt2, y-\sqrt2)~s.t.~x-\sqrt2<q<y-\sqrt2, \therefore x<r\coloneqq q+\sqrt2<y.$\\
+\end{document}

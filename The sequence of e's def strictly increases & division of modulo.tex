@@ -1,0 +1,23 @@
+\documentclass{article}\usepackage{amsfonts}\usepackage{amssymb}\usepackage{amsmath}\usepackage{mathtools}\usepackage[dvipsnames,usenames]{color}\usepackage{xcolor}\usepackage[margin=0.5cm]{geometry}\begin{document}\fontsize{13pt}{20pt}\selectfont\setlength{\parindent}{0pt}
+$Proposition.~e=\lim\limits_{n\to\infty}\bigg(1+\dfrac{1}{n}\bigg)^n.~\forall n\in\Bbb{N}, a_n=\bigg(1+\dfrac{1}{n}\bigg)^n.$\\
+$Show~that~(a_n)_{n=1}^\infty~strictly~increases\land\forall n\in\Bbb{N}, a_n\leq3-\dfrac{1}{n}.$\\
+$Proof:$\\
+$(i)$\\
+$$\forall n\in\Bbb{N}, a_{n+1}-a_n=\bigg(1+\dfrac{1}{n+1}\bigg)^{n+1}-\bigg(1+\dfrac{1}{n}\bigg)^n=\sum_{k=0}^{n+1}\dbinom{n+1}{k}\bigg(\dfrac{1}{n+1}\bigg)^k-\sum_{k=0}^{n}\dbinom{n}{k}\bigg(\dfrac{1}{n}\bigg)^k$$\\
+$$\\=\sum_{k=0}^{n}\bigg[\dbinom{n}{k}\bigg(\dfrac{1}{n+1}\bigg)^k-\dbinom{n}{k}\bigg(\dfrac{1}{n}\bigg)^k\bigg]+\bigg(\dfrac{1}{n+1}\bigg)^{n+1}$$\\
+$$\\=\begin{cases}0+0+\dfrac{1}{4}>0, if~n=1;\\0+0+\sum\limits_{k=2}^{n}\bigg[\dbinom{n+1}{k}\Big(\dfrac{1}{n+1}\Big)^k-\dbinom{n}{k}\Big(\dfrac{1}{n}\Big)^k\bigg]+\Big(\dfrac{1}{n+1}\Big)^{n+1}, otherwise.\end{cases}$$\\
+$(ii)$\\
+$$\forall n\in\Bbb{N}\cap[2, \infty), k\in\Bbb{N}\cap[2, n], \dbinom{n+1}{k}\bigg(\dfrac{1}{n+1}\bigg)^k-\dbinom{n}{k}\bigg(\dfrac{1}{n}\bigg)^k$$\\
+$$=\dfrac{(n+1)(n+1-1)\cdots[n+1-(k-1)]}{k!}\bigg(\dfrac{1}{n+1}\bigg)^k-\dfrac{n(n-1)\cdots[n-(k-1)]}{k!}\bigg(\dfrac{1}{n}\bigg)^k$$\\
+$$=\dfrac{1}{k!}\bigg[\prod_{i=0}^{k-1}\bigg(1-\dfrac{i}{n+1}\bigg)-\prod_{i=0}^{k-1}\bigg(1-\dfrac{i}{n}\bigg)\bigg]>\dfrac{1}{k!}\bigg[\prod_{i=0}^{k-1}\bigg(1-\dfrac{i}{\colorbox{SpringGreen}{\textit{\textbf{\color{NavyBlue}{n}}}}}\bigg)-\prod_{i=0}^{k-1}\bigg(1-\dfrac{i}{n}\bigg)\bigg]=0.$$\\
+$\therefore\forall n\in\Bbb{N}, a_{n+1}-a_n>0~by(i)(ii), (a_n)_{n=1}^\infty~is~strictly~increasing.$\\
+$(iii)$\\
+$a_1=2=3-\dfrac{1}{1}.~\forall n\in\Bbb{N}\cap[2, \infty),$\\
+$$a_n=1+\dbinom{n}{1}\dfrac{1}{n}+\sum_{k=2}^{n}\dbinom{n}{k}\bigg(\dfrac{1}{n}\bigg)^k=2+\sum_{k=2}^{n}\dfrac{n(n-1)\cdots[n-(k-1)]}{k!\cdot n^k}=2+\sum_{k=2}^{n}\dfrac{1}{k!}\prod_{i=0}^{k-1}\dfrac{n-i}{n}$$\\
+$$<2+\sum_{k=2}^{n}
+\dfrac{1}{k!}<2+\sum_{k=2}^{n}\dfrac{1}{(k-1)k}=2+(1-\dfrac{1}{n})=3-\dfrac{1}{n}.$$\\\\
+$Proposition. \forall a, b, p, n\in\Bbb{Z}~with~p\neq0\neq n, ap\equiv bp\pmod n, gcd(p, n)=1\Rightarrow a\equiv b\pmod n.$\\
+$Proof:$\\
+$n\vert ap-bp=p(a-b).~\because gcd(p, n)=1, \therefore n\vert a-b~by~Fundamental~Thm.~of~Arithmetic, a\equiv b\pmod n.$\\
+$(Generally, the~division~of~congruence~does~not~hold.~E.g.~6\equiv 4\pmod 2, 2\equiv2\pmod 2, \frac{6}{2}=3\not\equiv 2=\frac{4}{2}\pmod 2.~E.g.~16\equiv12\pmod 4, 8\equiv4\pmod 4, \dfrac{16}{8}=2\not\equiv3=\dfrac{12}{4}.)$\\
+\end{document}

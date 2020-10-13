@@ -1,0 +1,17 @@
+\documentclass{article}\usepackage{amsfonts}\usepackage{amssymb}\usepackage{amsmath}\usepackage{mathtools}\usepackage[dvipsnames,usenames]{color}\usepackage{xcolor}\usepackage[margin=0.5cm]{geometry}\begin{document}\fontsize{13pt}{20pt}\selectfont\setlength{\parindent}{0pt}
+$Proposition.~Given~n\in\Bbb{N}\cap[2, \infty).~\forall~prime~p\in[2, \sqrt{n}], p\nmid n.~Show~that~n~is~prime.$\\
+$Proof:$\\
+$Suppose~n~is~composite, \exists~prime~a~s.t.~a\vert n\Rightarrow a\notin[2, \sqrt{n}]~by~hypothesis; otherwise, prime~a\in [2, \sqrt{n}], a\nmid n, C!$\\
+$\therefore n-1\geq a>\sqrt{n}, 2\leq b\coloneqq\dfrac{n}{a}<\sqrt{n}, where~a\vert n\Rightarrow b\in\Bbb{N}.$\\
+$That~is, b\in [2, \sqrt{n}]\land b\vert n, accordingly~b~is~composite~by~hypothesis~again.$\\
+$Hence, \exists~prime~q\in\Bbb{N}~s.t.~q\vert b, then~2\leq q<b, \therefore q\in[2, \sqrt{n}], thus~q\nmid n~by~hypothesis.$\\
+$Nonetheless, q\vert b\land b\vert n\Rightarrow q\vert n, C!$\\
+
+$Proposition.~\forall m, n\in\Bbb{Z}, gcd(m, n)=1\Rightarrow gcd(m^in^j, m^k\pm n^l)=1~for~all~i,~j,~k,~l\in\Bbb{N}.$\\
+$Proof:$\\
+$(i)$\\
+$If~d\coloneqq gcd(m^in^j, m^k\pm n^l)\neq1.~\exists~prime~p\in\Bbb{N}~s.t.~p\vert d, \therefore p\vert m^in^j,$\\
+$~p\vert m\lor p\vert n~by~Arithmetic~Fundamental~Thm.; ~w.l.o.g.~let~p\vert m.$\\
+$(ii)$\\
+$\because p\vert d, \therefore p\vert m^k\pm n^l, thus~p\vert n~by~(i)~and~Arithmetic~Fundamental~Thm., \therefore p\vert gcd(m, n)=1,~C!$\\
+\end{document}

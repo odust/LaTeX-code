@@ -1,0 +1,45 @@
+\documentclass{article}\usepackage{amsfonts}\usepackage{amssymb}\usepackage{amsmath}\usepackage{mathtools}\usepackage[dvipsnames,usenames]{color}\usepackage{xcolor}\usepackage[margin=0.5cm]{geometry}\begin{document}\fontsize{13pt}{20pt}\selectfont\setlength{\parindent}{0pt}
+$Proposition.~\mathcal{C}~is~the~Cantor~set, |\mathcal{C}|=|\Bbb{R}|.$\\
+$\forall x\in\mathcal{C}, the~ternary~expansion~of~x=\sum_{i=1}^\infty\dfrac{a_i}{3^i}, where~a_i's\in\{0, 1, 2\}.$\\
+$That~is, the~ternary~representation~of~x=0.a_1a_2a_3\dots_{base3}, and~the~ternary~representation~ending~in$\\
+$infinitely~consecutive~(repeating)~2's~is~excluded~so~that~the~ternary~representation~is~unique.$\\
+$For~instance, 0.0222\dots_{base3}~will~be~identified~as~0.1000\dots_{base3}.$\\
+$Furthermore, I_{kj}~denotes~the~jth~interval~(from~LHS~to~RHS)~in~the~kth~step~of~the~construction~of~\mathcal{C},$\\
+$where~k\in\Bbb{N}, j\in\{1, 2, 3,\dots, 2^k\}.$\\
+$Moreover, x~is~in~some~I_{kj}\wedge all~of~its~nonzero~digits\neq 1\Longleftrightarrow x~is~the~left~endpoint~of~I_{kj}~by~induction.$\\\\
+$Claim:For~the~x~just~mentioned, \exists i\in\Bbb{N}~s.t.~a_i=1\Rightarrow a_m\neq 1~for~all~m\in\{1, 2, 3,\dots, i-1\}\wedge$\\
+$a_m=0~for~all~m\in\Bbb{N}~with~m\geq i+1.$\\
+\iffalse 對於C裏面之x三進位表示,若小數位有某一位是1,則其前之位數不會有1,且其後之位數皆為0.\fi
+$Proof:Suppose~\exists i\in\Bbb{N}~s.t.~a_i=1, i\in L\coloneqq\{l\in\Bbb{N}\mid a_l=1\}\neq\emptyset,n\coloneqq minL\in L~by~well-ordering~principle,$\\
+$n\leq i\wedge a_m\neq 1~for~all~m\in\{1, 2, 3,\dots, n-1\}.~If~n\neq i, 0.a_1a_2a_3\dots a_{n-1}1_{base3}<x<0.a_1a_2a_3\dots a_{n-1}2_{base3},$\\
+$note~0.a_1a_2a_3\dots a_{n-1}\hspace*{.1em}_{base3}~is~the~left~endpoint~of~I_{(n-1)j}~for~some~j\in\{1, 2, 3,\dots, 2^{n-1}\},~then$\\
+$0.a_1a_2a_3\dots a_{n-1}\hspace*{.1em}_{base3}~is~the~left~endpoint~of~I_{n(2j-1)},$\\
+$0.a_1a_2a_3\dots a_{n-1}1_{base3}~is~the~right~endpoint~of~I_{n(2j-1)},$\\
+$0.a_1a_2a_3\dots a_{n-1}2_{base3}~is~the~left~endpoint~of~I_{n(2j)},$\\
+$\therefore x\notin\mathcal{C}~(that~is, x~is~deleted~in~the~procedure~of~constructing~\mathcal{C})\iffalse(在Cantor set建構過程中被挖掉)\fi, C!$\\
+$\therefore n=i, a_m\neq 1~for~all~m\in\{1, 2, 3,\dots, i-1\}.$\\
+$Analogously, if~\exists m\in\Bbb{N}~with~m\geq i+1~s.t.~a_m\neq 0,
+0.a_1a_2a_3\dots a_{i-1}1_{base3}<x<0.a_1a_2a_3\dots a_{i-1}2_{base3},$\\
+$\therefore x\notin\mathcal{C}, C!~\therefore a_m=0~for~all~m\in\Bbb{N}~with~m\geq i+1.$\\\\
+$Accordingly, ~by~the~construction~process~of~\mathcal{C}~and~induction,$\\
+$the~ternary~representation~of~x~only~contains~a~finite~quantity~of~nonzero~digits\Longleftrightarrow
+x~is~an~endpoint~of~some~I_{kj}.$\\
+$Note~\mathcal{C}, thus, does~not~merely~contain~the~endpoints~but~also~points~which~are~not~the~endpoints~of~I_{kj}'s.$\\
+$Particularly, 0.202020\dots_{base3}=\dfrac{2/3}{1-1/9}=\dfrac{3}{4}.$\\\\
+$Therefore, \mathcal{C}\subseteq\mathcal{A}\coloneqq\big\{\sum_{i=1}^\infty\dfrac{a_i}{3^i}\big\arrowvert a_i's\in \{0,2\}\big\}.~Now~\forall x\in\mathcal{A}, n\in\Bbb{N}, x=\sum_{i=1}^\infty\dfrac{a_i}{3^i}~for~some~a_i's~in~\{0,2\},$\\
+$x_n\coloneqq\sum_{i=1}^n\dfrac{a_i}{3^i}\in\mathcal{C}~is~closed, \therefore x=\lim\limits_{n\rightarrow\infty}x_n\in\mathcal{C}, \mathcal{A}\subseteq\mathcal{C}.~Consequently, \mathcal{C}=\mathcal{A}.$\\\\
+$Define~f:[0, 1)\longrightarrow\mathcal{C}:f(x)=\sum_{i=1}^\infty\dfrac{2b_i}{3^i}, where~x=\sum_{i=1}^\infty\dfrac{b_i}{2^i}~for~some~b_i's~in~\{0, 1\}.$\\
+$Similarly, the~binary~representation~ending~in$\\
+$infinitely~consecutive~(repeating)~1's~is~excluded~so~that~the~binary~representation~is~unique.$\\
+$For~example, 0.0111\dots_{base2}~will~be~identified~as~0.1000\dots_{base2}.$\\
+$\therefore In~Im(f), the~ternary~representation~ending~in$\\
+$infinitely~consecutive~(repeating)~2's~is~also~excluded~s.t.~the~ternary~representation~is~unique~in~Im(f).$\\
+$It~follows~that~f, obviously, is~well-defined.$\\
+$And~suppose~\sum_{i=1}^\infty\dfrac{b_i}{2^i}=x\neq t=\sum_{i=1}^\infty\dfrac{v_i}{2^i}~for~some~b_i's, v_i's~in~\{0, 1\}$\\
+$\Rightarrow \emptyset\neq P\coloneqq\{p\in\Bbb{N}\mid b_p\neq v_p\}\wedge q\coloneqq minP~exists~in~P\cap\Bbb{N}~by~well-ordering~principle$\\
+$\Rightarrow b_i=v_i~for~i=1, 2, 3,\dots, q-1\wedge b_q\neq v_q~(w.l.o.g.~assume~1=b_q>v_q=0)$\\
+$\Rightarrow 2b_i=2v_i~for~i=1, 2, 3,\dots, q-1\wedge 2=2b_q>2v_q=0$\\
+$\Rightarrow f(x)\geq 0.(2b_1)(2b_2)(2b_3)\dots (2b_{q-1})2>0.(2b_1)(2b_2)(2b_3)\dots (2b_{q-1})1=0.(2v_1)(2v_2)(2v_3)\dots (2v_{q-1})1$\\
+$>0.(2v_1)(2v_2)(2v_3)\dots (2v_{q-1})0(2v_{q+1})(2v_{q+2})(2v_{q+3})\dots=f(t)\Rightarrow f(x)\neq f(t)\Rightarrow f~is~injective.$\\
+$Hence~|\Bbb{N}|<|[0, 1)|\leq|\mathcal{C}|\leq|\Bbb{R}|, and~thus~|\mathcal{C}|=|\Bbb{R}|~by~the~Continuum~Hypothesis.$\\
+\end{document}

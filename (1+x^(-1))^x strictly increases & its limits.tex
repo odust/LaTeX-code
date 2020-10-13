@@ -1,0 +1,17 @@
+\documentclass{article}\usepackage{amsfonts}\usepackage{amssymb}\usepackage{amsmath}\usepackage{mathtools}\usepackage[dvipsnames,usenames]{color}\usepackage{xcolor}\usepackage[margin=0.5cm]{geometry}\begin{document}\fontsize{13pt}{20pt}\selectfont\setlength{\parindent}{0pt}
+$Proposition.~f:\Bbb{R}\setminus[-1, 0]\longrightarrow(0, \infty):f(x)=\bigg(1+\dfrac{1}{x}\bigg)^x, show~that~f~strictly~increases\land f(x)\to\begin{cases}e, as~x\to-\infty;\\\infty, as~x\to-1^-;\\1, as~x\to0^+;\\e, as~x\to\infty.\end{cases}$\\
+$Proof:$\\
+$(i)$\\
+$g:(-\infty, 1)\longrightarrow\Bbb{R}:g(t)\coloneqq e^{-t}-(1-t).~Claim~\forall t\in(-\infty, 1)\setminus\{0\}, g(t)>0.$\\
+$\forall t\in(0, 1), g\,'(t)=-e^{-t}+1>-1+1=0,g(t)=g(t)-g(0)=g\,'(c)(t-0)>0~for~some~c\in(0, t)~by~Mean~Value~Thm;$\\
+$analogously, \forall t\in(-\infty, 0), g\,'(t)=-e^{-t}+1<-1+1=0, g(t)=g(t)-g(0)=g\,'(c)(t-0)>0~for~some~c\in(t, 0).$\\
+$(ii)$\\
+$h:\Bbb{R}\setminus[-1, 0]\longrightarrow\Bbb{R}:h(x)\coloneqq\ln(1+\dfrac{1}{x})-\dfrac{1}{x+1}.~Claim~h(x)>0~on~\Bbb{R}\setminus[-1, 0].$\\
+$\forall x\in\Bbb{R}\setminus[-1, 0], t\coloneqq\dfrac{1}{x+1}\in(-\infty, 1)\setminus\{0\}, g(t)>0~by~(i)\equiv e^{-t}>1-t\equiv\exp(\dfrac{-1}{x+1})>(1+\dfrac{1}{x})^{-1}\big(where~1+\dfrac{1}{x}>0~on~\Bbb{R}\setminus[-1, 0]\big)\equiv1+\dfrac{1}{x}>\exp(\dfrac{1}{x+1})\equiv\ln(1+\dfrac{1}{x})>\dfrac{1}{x+1}\equiv h(x)>0.$\\
+$(iii)$\\
+$\forall x\in\Bbb{R}\setminus[-1, 0], f\,'(x)=\bigg(\Big(1+\dfrac{1}{x}\Big)^{x\ln e}\bigg)'=\bigg(\exp\Big(x\ln\big(1+\dfrac{1}{x}\big)\Big)\bigg)'=\exp\Big(x\ln\big(1+\dfrac{1}{x}\big)\Big)\cdot\Big(x\ln\big(1+\dfrac{1}{x}\big)\Big)'=f(x)h(x)>0~by~(ii), \therefore f~is~stricyly~increasing.$\\
+$(iv)$\\
+$\lim\limits_{x\to-1^-}f(x)=\lim\limits_{x\to-1^-}\exp\Big(x\ln\big(1+\dfrac{1}{x}\big)\Big)=\exp\Big(\lim\limits_{x\to-1^-}x\ln\big(1+\dfrac{1}{x}\big)\Big)=\infty; analogously,$\\ $\lim\limits_{x\to\infty}f(x)=\exp\Big(\lim\limits_{x\to\infty}x\ln\big(1+\dfrac{1}{x}\big)\Big)=\exp\left(\lim\limits_{x\to\infty}\dfrac{\ln\big(1+\dfrac{1}{x}\big)}{\dfrac{1}{x}}\right)=\exp\left(\lim\limits_{x\to\infty}\dfrac{\Big(\ln\big(1+\dfrac{1}{x}\big)\Big)'}{\big(\dfrac{1}{x}\big)'}\right)$\\
+$=\exp\left(\lim\limits_{x\to\infty}\dfrac{\big(1+\dfrac{1}{x}\big)^{-1}\big(1+\dfrac{1}{x}\big)'}{\big(\dfrac{1}{x}\big)'}\right)=\exp\left(\lim\limits_{x\to\infty}\dfrac{1}{\big(1+\dfrac{1}{x}\big)}\right)=e~by~L'H\hat{o}pital's~rule.$\\[0.4cm]
+$Similarly, \lim\limits_{x\to-\infty}f(x)=e, \lim\limits_{x\to0^+}f(x)=1.$\\
+\end{document}
