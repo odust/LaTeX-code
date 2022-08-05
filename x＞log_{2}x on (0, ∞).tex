@@ -1,0 +1,13 @@
+\documentclass{article}\usepackage{amsfonts}\usepackage{amssymb}\usepackage{amsmath}\usepackage{mathtools}\usepackage[dvipsnames,usenames]{color}\usepackage{xcolor}\usepackage[margin=0.5cm]{geometry}\begin{document}\fontsize{13pt}{20pt}\selectfont\setlength{\parindent}{0pt}
+$Lemma.~x>\log_{2}x~on~(0,~\infty).$\\
+$Proof:(i)$\\
+$Define~f:(0,~\infty)\longrightarrow\Bbb{R}:f(x)=x-\log_{2}x,~f~is~continuous~and~differentiable~on~(0,~\infty),~f'(x)=1-\dfrac{1}{x\ln2}=\dfrac{x-\log_{2}e}{x}\begin{cases}>0,~if~x\in(\log_{2}e,~\infty)\\=0,~if~x=\log_{2}e\\<0,~if~x\in(0,~\log_{2}e)\end{cases}.~Note~that~\log_{2}x~is~strictly~increasing~on~(0,~\infty),~f(\log_{2}e)=\log_{2}e-\log_{2}(\log_{2}e)>\log_{2}e-\log_{2}(\log_{2}2.8)>\log_{2}e-\log_{2}(\log_{2}2\sqrt{2})=\log_{2}e-\log_{2}1.5>0.\therefore~By~Mean~Value~Theorem:\forall x\in(\log_{2}e,~\infty),~\exists c_x\in(\log_{2}e,~x)~s.t.~f(x)-f(\log_{2}e)=f'(c_x)(x-\log_{2}e)>0,~f(x)>f(\log_{2}e)>0.$\\
+$(ii)$\\
+$Similarly,~by~Mean~Value~Theorem:\forall x\in(0,~\log_{2}e),~\exists t_x\in(x,~\log_{2}e)~s.t.~f(x)-f(\log_{2}e)=f'(t_x)(x-\log_{2}e)>0,~f(x)>f(\log_{2}e)>0.$\\
+$Accordingly,~by(i)(ii):f>0~on~(0,~\infty),~i.e.~x>\log_{2}x~on~(0,~\infty).$\\
+\\
+$Proposition.~n>\log_{2}n,~\forall n\in\Bbb{N},~where~\Bbb{N}~denotes~the~set~of~all~positive~numbers.$\\
+$Proof~1:By~the~above~lemma,~done.$\\
+$Proof~2:\log_{2}x~is~strictly~increasing~on~(0,~\infty).$\\
+$~\forall n\in\Bbb{N},~n\geq1,~2^n=(1+1)^n=\sum\limits_{k=0}^{n}\dbinom{n}{k}\ge\dbinom{n}{0}+\dbinom{n}{1}=1+n>n\iff n=\log_{2}(2^n)>\log_{2}n.$\\
+\end{document}

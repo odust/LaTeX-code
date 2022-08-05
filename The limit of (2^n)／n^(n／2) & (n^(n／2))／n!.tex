@@ -1,0 +1,11 @@
+\documentclass{article}\usepackage{amsfonts}\usepackage{amssymb}\usepackage{amsmath}\usepackage{mathtools}\usepackage[dvipsnames,usenames]{color}\usepackage{xcolor}\usepackage[margin=0.5cm]{geometry}\begin{document}\fontsize{13pt}{20pt}\selectfont\setlength{\parindent}{0pt}
+$Proposition.~\lim\limits_{n\to\infty}\dfrac{2^n}{n^\frac{n}{2}}=0.$\\
+$Proof:\forall n\in\Bbb{N},~a_n\coloneqq\dfrac{2^n}{n^\frac{n}{2}},~\lim\limits_{n\to\infty}\dfrac{a_{n+1}}{a_n}=\lim\limits_{n\to\infty}\dfrac{\dfrac{2^{n+1}}{(n+1)^\frac{n+1}{2}}}{\dfrac{2^n}{n^\frac{n}{2}}}=\lim\limits_{n\to\infty}\dfrac{2}{\sqrt{n+1}}\cdot\dfrac{1}{\sqrt{(1+\frac{1}{n})^n}}=0\cdot\dfrac{1}{\sqrt{e}}=0.$\\
+$Accordingly~(actually~\sum\limits_{n=1}^{\infty}a_n~converges~absolutely~by~Ratio~Test),~\therefore~for~\dfrac{1}{2},~\exists n_0\in\Bbb{N}~s.t.~\dfrac{a_{n+1}}{a_n}<\dfrac{1}{2},~\forall n\ge n_0.~Thus,~\forall n\ge n_0,~a_n<\dfrac{1}{2}a_{n-1}<\bigg(\dfrac{1}{2}\bigg)^2a_{n-2}<\ldots<\bigg(\dfrac{1}{2}\bigg)^{n-n_0}a_{n_0}\longrightarrow0~as~n\longrightarrow\infty,~i.e.~\lim\limits_{n\to\infty}\dfrac{2^n}{n^\frac{n}{2}}=0.$\\
+\\
+\\
+\\
+$Proposition.~\lim\limits_{n\to\infty}\dfrac{n^\frac{n}{2}}{n!}=0.$\\
+$Proof:\forall n\in\Bbb{N},~a_n\coloneqq\dfrac{n^\frac{n}{2}}{n!},~\lim\limits_{n\to\infty}\dfrac{a_{n+1}}{a_n}=\lim\limits_{n\to\infty}\dfrac{\dfrac{(n+1)^\frac{n+1}{2}}{(n+1)!}}{\dfrac{n^\frac{n}{2}}{n!}}=\lim\limits_{n\to\infty}\dfrac{1}{\sqrt{n+1}}\cdot\sqrt{(1+\frac{1}{n})^n}=0\cdot\sqrt{e}=0.$\\
+$Accordingly~(actually~\sum\limits_{n=1}^{\infty}a_n~converges~absolutely~by~Ratio~Test),~\therefore~for~\dfrac{1}{2},~\exists n_0\in\Bbb{N}~s.t.~\dfrac{a_{n+1}}{a_n}<\dfrac{1}{2},~\forall n\ge n_0.~Thus,~\forall n\ge n_0,~a_n<\dfrac{1}{2}a_{n-1}<\bigg(\dfrac{1}{2}\bigg)^2a_{n-2}<\ldots<\bigg(\dfrac{1}{2}\bigg)^{n-n_0}a_{n_0}\longrightarrow0~as~n\longrightarrow\infty,~i.e.~\lim\limits_{n\to\infty}\dfrac{n^\frac{n}{2}}{n!}=0.$\\
+\end{document}
